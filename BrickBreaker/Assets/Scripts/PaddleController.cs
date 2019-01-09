@@ -12,11 +12,6 @@ public class PaddleController : MonoBehaviour
     [SerializeField]
     float maxX = 18f;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         float mousePositionInUnits = Input.mousePosition.x / Screen.width * screenWidthInUnits;

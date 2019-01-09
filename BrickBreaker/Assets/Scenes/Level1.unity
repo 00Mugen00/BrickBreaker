@@ -570,6 +570,7 @@ GameObject:
   - component: {fileID: 1348921466}
   - component: {fileID: 1348921465}
   - component: {fileID: 1348921468}
+  - component: {fileID: 1348921469}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -654,7 +655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348921464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.73, y: 4.53, z: 0}
+  m_LocalPosition: {x: 10.79, y: 0.72, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -676,3 +677,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5999999
+--- !u!114 &1348921469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348921464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ee3c4d1024fb4a9d377117a00fc6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddleController: {fileID: 287895782}
+  xForce: 2
+  yForce: 15
