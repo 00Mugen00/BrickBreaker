@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour
         breakableBlocks++;
     }
 
-    public void BlockDestroyed()
+    public void BrickDestroyed()
     {
         breakableBlocks--;
         if (breakableBlocks <= 0)
