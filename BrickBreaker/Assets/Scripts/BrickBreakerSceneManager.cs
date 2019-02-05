@@ -19,6 +19,7 @@ public class BrickBreakerSceneManager : MonoBehaviour
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
+        FindObjectOfType<GameManager>().ResetGame();
     }
 
     public void QuitGame()

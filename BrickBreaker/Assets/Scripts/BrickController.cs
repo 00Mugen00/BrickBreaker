@@ -6,6 +6,8 @@ public class BrickController : MonoBehaviour
 {
     [SerializeField]
     AudioClip breakSound;
+    [SerializeField]
+    GameObject brickSparklesVFX;
 
     LevelManager levelManager;
 
@@ -17,9 +19,16 @@ public class BrickController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        FindObjectOfType<GameStatus>().AddToScore();
+        FindObjectOfType<GameManager>().AddToScore();
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         Destroy(gameObject);
         levelManager.BrickDestroyed();
+        TriggerSparklesVFX();
+    }
+
+    private void TriggerSparklesVFX()
+    {
+        GameObject sparkles = Instantiate(brickSparklesVFX, transform.position, transform.rotation);
+        Destroy(sparkles);
     }
 }
