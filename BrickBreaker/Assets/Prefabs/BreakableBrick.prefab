@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3322316869397663297}
   - component: {fileID: 3322316869397663324}
   m_Layer: 0
-  m_Name: Brick
-  m_TagString: Untagged
+  m_Name: BreakableBrick
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,3 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakSound: {fileID: 8300000, guid: 2c16554cebb87b743af6e87be5622168, type: 3}
   brickSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  maxHits: 2
+  hitSprites:
+  - {fileID: 21300000, guid: ea12bed6d5453e64d9ebecb40581b609, type: 3}
+  - {fileID: 21300000, guid: 00a8c1012d203544e803baa70a7253cf, type: 3}
+  timesHit: 0
