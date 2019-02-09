@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     int pointsPerBrickDestroyed = 10;
     [SerializeField]
     TextMeshProUGUI scoreText;
+    [SerializeField]
+    bool isAutoPlayEnabled;
 
     [SerializeField]
     int currentScore = 0;
@@ -50,5 +52,10 @@ public class GameManager : MonoBehaviour
     public void ResetGame()
     {
         Destroy(gameObject);
+    }
+
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoPlayEnabled;
     }
 }

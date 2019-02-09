@@ -135,6 +135,7 @@ MonoBehaviour:
   paddleController: {fileID: 0}
   xForce: 2
   yForce: 15
+  randomFactor: 3
 --- !u!82 &1511304867
 AudioSource:
   m_ObjectHideFlags: 0

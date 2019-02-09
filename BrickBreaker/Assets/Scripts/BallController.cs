@@ -12,13 +12,18 @@ public class BallController : MonoBehaviour
     float xForce = 2f;
     [SerializeField]
     float yForce = 15f;
+    [SerializeField]
+    float randomFactor = 0.5f;
 
     Vector2 paddleToBallVector;
     bool hasStarted = false;
 
+    Rigidbody2D rigidbody2D;
+
     void Start()
     {
         paddleToBallVector = transform.position - paddleController.transform.position;
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -36,7 +41,7 @@ public class BallController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             hasStarted = true;
-            GetComponent<Rigidbody2D>().velocity = new Vector2(xForce, yForce);
+            rigidbody2D.velocity = new Vector2(xForce, yForce);
         }
     }
 
@@ -48,9 +53,11 @@ public class BallController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Vector2 velocityTweak = new Vector2(UnityEngine.Random.Range(0f,randomFactor), UnityEngine.Random.Range(0f, randomFactor));
         if (hasStarted)
         {
             GetComponent<AudioSource>().Play();
+            rigidbody2D.velocity += velocityTweak;
         }
     }
 }
